@@ -10,7 +10,6 @@
 </head>
 <body>
   <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
     <symbol id="i-calculator" viewBox="0 0 48 48"><rect x="9" y="4" width="30" height="40" rx="2"/><rect x="14" y="10" width="20" height="8" rx="1"/><path d="M15 24h3m6 0h3m6 0h.1M15 31h3m6 0h3m6 0h.1M15 38h3m6 0h3m6-7v7"/></symbol>
     <symbol id="i-growth" viewBox="0 0 48 48"><path d="M5 40h38M9 37v-7h7v7m5 0V24h7v13m5 0V17h7v20M7 23l12-11 8 6L42 5m-8 0h8v8"/></symbol>
@@ -30,11 +29,11 @@
 
   <header class="site-header" id="home">
     <div class="header-inner">
-      <a class="brand" href="#home" aria-label="Acorn Accounting home"><span class="brand-symbol" aria-hidden="true"><img src="logo.svg" alt=""></span><span class="brand-wordmark">Acorn Accounting<small>Oak Tree Business Services</small></span></a>
+      <a class="brand" href="#home" aria-label="Acorn Accounting home"><img class="brand-symbol" src="logo-icon.svg" alt=""><span class="brand-wordmark">Acorn Accounting<small>Oak Tree Business Services</small></span></a>
       <nav class="main-nav" aria-label="Main navigation">
         <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#resources">Resources</a><a href="#contact">Contact</a>
       </nav>
-      <a class="button button-dark header-cta" href="#contact">Get In Touch <svg><use href="#i-arrow"/></svg></a>
+      <a class="button button-dark header-cta" href="#contact">Get In Touch</a>
       <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -43,10 +42,9 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow line-right">Accounting &amp; Business Support</p>
           <h1 id="hero-title">Helping Your<br>Business Grow</h1>
           <p class="hero-intro">Friendly, reliable and professional accounting services for small businesses and sole traders. We take care of the numbers, so you can focus on what you do best.</p>
-          <div class="hero-actions"><a class="button button-dark" href="#contact">Get In Touch <svg><use href="#i-arrow"/></svg></a><a class="button button-outline" href="#services">Our Services</a></div>
+          <div class="hero-actions"><a class="button button-dark" href="#contact">Get In Touch</a><a class="button button-outline" href="#services">Our Services</a></div>
           <ul class="hero-trust"><li><svg><use href="#i-check"/></svg> Expert Advice</li><li><svg><use href="#i-check"/></svg> Competitive Prices</li><li><svg><use href="#i-check"/></svg> Personal Service</li></ul>
         </div>
       </div>
@@ -92,7 +90,7 @@
           <p class="eyebrow line-right">About Us</p>
           <h2 id="about-title">More Than Just<br>Numbers</h2>
           <p>At Acorn Accounting &amp; Oak Tree Business Services, we believe in building long-term relationships with our clients. We're not just here to crunch numbers — we're here to support your goals, solve problems and help your business thrive.</p>
-          <a class="button button-dark button-small" href="#contact">Learn More <svg><use href="#i-arrow"/></svg></a>
+          <a class="button button-dark button-small" href="#contact">Learn More</a>
         </div>
         <div class="about-values">
           <article><svg class="value-icon solid"><use href="#i-leaf"/></svg><div><h3>Trusted &amp; Experienced</h3><p>Years of industry experience across a range of sectors.</p></div></article>
@@ -128,7 +126,7 @@
       <div class="testimonial" id="resources"><div class="testimonial-inner"><p class="eyebrow">Client Testimonials</p><h2>What Our Clients Say</h2><blockquote><span aria-hidden="true">“</span><p>“Acorn Accounting has been fantastic to work with. They're knowledgeable, responsive and always go the extra mile. I finally feel in control of my finances!”</p></blockquote><p class="quote-name">Sarah Mitchell</p><p class="quote-role">Small Business Owner</p><div class="testimonial-controls"><div class="dots" aria-label="Testimonial 1 of 1"><span class="selected"></span><span></span><span></span></div><div class="quote-arrows"><button type="button" aria-label="Previous testimonial" disabled>‹</button><button type="button" aria-label="Next testimonial" disabled>›</button></div></div></div></div>
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-title"><div class="contact-inner"><div class="contact-copy"><p class="eyebrow">Get In Touch</p><h2 id="contact-title">Let’s Talk About<br>Your Business</h2><p>Get in touch today for a free, no-obligation consultation.<br>We'd love to hear from you.</p></div><form class="contact-form" id="contact-form"><div class="form-row"><label><span class="visually-hidden">Full Name</span><input type="text" name="name" placeholder="Full Name *" autocomplete="name" required></label><label><span class="visually-hidden">Email Address</span><input type="email" name="email" placeholder="Email Address *" autocomplete="email" required></label></div><label><span class="visually-hidden">Phone Number</span><input type="tel" name="phone" placeholder="Phone Number *" autocomplete="tel" required></label><label><span class="visually-hidden">How can we help?</span><select name="service" required><option value="" selected disabled>How can we help? * — Please select</option><option>Bookkeeping</option><option>Annual accounts</option><option>Self assessment tax returns</option><option>VAT services</option><option>Business advisory</option><option>Company formation</option><option>Other enquiry</option></select></label><button class="button button-dark button-small" type="submit">Send Message <svg><use href="#i-arrow"/></svg></button><p class="form-note" role="status" aria-live="polite"></p></form></div></section>
+    <section class="contact" id="contact" aria-labelledby="contact-title"><div class="contact-inner"><div class="contact-copy"><p class="eyebrow">Get In Touch</p><h2 id="contact-title">Let’s Talk About<br>Your Business</h2><p>Get in touch today for a free, no-obligation consultation.<br>We'd love to hear from you.</p></div><form class="contact-form" id="contact-form"><div class="form-row"><label><span class="visually-hidden">Full Name</span><input type="text" name="name" placeholder="Full Name *" autocomplete="name" required></label><label><span class="visually-hidden">Email Address</span><input type="email" name="email" placeholder="Email Address *" autocomplete="email" required></label></div><label><span class="visually-hidden">Phone Number</span><input type="tel" name="phone" placeholder="Phone Number *" autocomplete="tel" required></label><label><span class="visually-hidden">How can we help?</span><select name="service" required><option value="" selected disabled>How can we help? * — Please select</option><option>Bookkeeping</option><option>Annual accounts</option><option>Self assessment tax returns</option><option>VAT services</option><option>Business advisory</option><option>Company formation</option><option>Other enquiry</option></select></label><button class="button button-dark button-small" type="submit">Send Message</button><p class="form-note" role="status" aria-live="polite"></p></form></div></section>
   </main>
 
   <footer class="site-footer dark-leaves"><div class="footer-inner"><div class="footer-main"><a class="footer-brand" href="#home" aria-label="Acorn Accounting home"><img src="logo-icon-white.svg" alt=""><span>ACORN ACCOUNTING<small>OAK TREE BUSINESS SERVICES</small></span></a><nav class="footer-nav" aria-label="Footer navigation"><div><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#pricing">Pricing</a></div><div><a href="#resources">Resources</a><a href="#contact">Contact</a></div></nav><address class="footer-contact"><a href="tel:+442081234567"><svg><use href="#i-phone"/></svg>020 8123 4567</a><a href="mailto:info@acorntreeaccounting.co.uk"><svg><use href="#i-mail"/></svg>info@acorntreeaccounting.co.uk</a><span><svg><use href="#i-pin"/></svg>West London, UK</span></address></div><div class="footer-bottom"><p>© <span id="year">2026</span> Acorn Accounting &amp; Oak Tree Business Services. All rights reserved.</p><div><a href="mailto:info@acorntreeaccounting.co.uk?subject=Privacy%20Policy%20Request">Privacy Policy</a><span>|</span><a href="mailto:info@acorntreeaccounting.co.uk?subject=Terms%20and%20Conditions%20Request">Terms &amp; Conditions</a></div><div class="socials" aria-hidden="true"><span>in</span><span>f</span></div></div></div></footer>
