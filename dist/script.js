@@ -1,5 +1,11 @@
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
+const header = document.querySelector('.site-header');
+
+const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 0);
+updateHeader();
+window.addEventListener('scroll', updateHeader, { passive: true });
+window.addEventListener('pageshow', updateHeader);
 
 menuButton?.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
