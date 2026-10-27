@@ -6,7 +6,9 @@ After changing the root source files, run `powershell -ExecutionPolicy Bypass -F
 
 ## Change the hero photograph
 
-In `index.html`, change the `href` on the `<image class="hero-photo">` element. The curved photo mask, green and gold leaves, and surrounding layout are separate SVG paths and stay in place. The current stock image is `assets/hero-candidate.jpg`.
+In `index.html`, change the `href` on the `<image class="hero-photo">` element. The curved photo mask and leaf assets stay in place. The current stock image is `assets/hero-candidate.jpg`.
+
+The botanical artwork is stored as transparent, high-resolution PNG assets in `assets/hero-leaves-generated.png`, `assets/hero-lower-leaves-generated.png`, and `assets/about-leaves-generated.png`. The hero and tree photographs remain separate from these assets, so changing a photograph preserves its curved crop and leaf treatment.
 
 For a replacement with a different aspect ratio, adjust the image's `x`, `y`, `width`, and `height` values to choose the crop. Keep the `clip-path="url(#hero-photo-shape)"` attribute.
 
