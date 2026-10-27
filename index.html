@@ -51,17 +51,15 @@
         </div>
       </div>
       <div class="hero-art" aria-hidden="true">
-        <svg viewBox="0 0 820 640" preserveAspectRatio="none">
+        <svg viewBox="0 0 1457 1080" preserveAspectRatio="none">
           <defs>
-            <clipPath id="hero-photo-shape"><path d="M307 0 C208 0 118 102 74 238 C27 355 15 469 65 555 C88 606 121 638 185 640 H820 V0Z"/></clipPath>
-            <clipPath id="hero-top-leaves"><rect x="0" y="0" width="820" height="300"/></clipPath>
+            <mask id="hero-frame-mask" x="0" y="0" width="1457" height="1080" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" style="mask-type:alpha">
+              <image href="assets/hero-window-mask.png" x="0" y="0" width="1457" height="1080" preserveAspectRatio="none"/>
+            </mask>
           </defs>
-          <!-- The generated leaf artwork is a transparent, replaceable asset behind the separately masked photograph. -->
-          <image href="assets/hero-leaves-generated.png" x="0" y="0" width="820" height="640" preserveAspectRatio="none" clip-path="url(#hero-top-leaves)"/>
-          <image href="assets/hero-lower-leaves-generated.png" x="0" y="450" width="200" height="190" preserveAspectRatio="none"/>
-          <!-- Replace only this image href; the mask, curved edge, and leaves stay fixed. -->
-          <image class="hero-photo" href="assets/hero-candidate.jpg" x="0" y="-345" width="820" height="1093" preserveAspectRatio="none" clip-path="url(#hero-photo-shape)"/>
-          <path d="M307 0 C208 0 118 102 74 238 C27 355 15 469 65 555 C88 606 121 638 185 640" fill="none" stroke="#faf9f5" stroke-width="12" stroke-linecap="butt"/>
+          <!-- Change this image href to replace only the photograph. The complete artwork above it is a single image asset. -->
+          <image class="hero-photo" href="assets/hero-composite.png" x="0" y="0" width="1457" height="1080" preserveAspectRatio="xMidYMid slice"/>
+          <image href="assets/hero-composite.png" x="0" y="0" width="1457" height="1080" preserveAspectRatio="none" mask="url(#hero-frame-mask)"/>
         </svg>
       </div>
     </section>
@@ -79,12 +77,15 @@
     <section class="about section-cream" id="about" aria-labelledby="about-title">
       <div class="about-inner">
         <div class="about-art" aria-hidden="true">
-          <svg class="about-shape" viewBox="0 0 380 370" preserveAspectRatio="xMidYMid meet">
-            <defs><clipPath id="about-photo-shape"><path d="M188 29 C277 33 348 82 352 163 C354 230 299 294 202 333 C151 357 91 347 48 315 C8 278 21 209 63 142 C91 92 130 49 188 29Z"/></clipPath></defs>
-            <image href="assets/about-leaves-generated.png" x="0" y="0" width="380" height="370" preserveAspectRatio="none"/>
-            <image href="assets/oak-canopy.jpg" x="15" y="0" width="355" height="370" preserveAspectRatio="xMidYMid slice" clip-path="url(#about-photo-shape)"/>
-            <path d="M178 31 C123 59 79 113 55 178" fill="none" stroke="#faf9f5" stroke-width="10" stroke-linecap="round"/>
-            <path d="M335 263 C283 315 206 349 126 344" fill="none" stroke="#faf9f5" stroke-width="10" stroke-linecap="round"/>
+          <svg class="about-shape" viewBox="0 0 1221 1288" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <mask id="about-frame-mask" x="0" y="0" width="1221" height="1288" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" style="mask-type:alpha">
+                <image href="assets/about-window-mask.png" x="0" y="0" width="1221" height="1288" preserveAspectRatio="none"/>
+              </mask>
+            </defs>
+            <!-- Change this href to replace the tree photo inside the complete artwork. -->
+            <image class="about-photo" href="assets/about-composite.png" x="0" y="0" width="1221" height="1288" preserveAspectRatio="xMidYMid slice"/>
+            <image href="assets/about-composite.png" x="0" y="0" width="1221" height="1288" preserveAspectRatio="none" mask="url(#about-frame-mask)"/>
           </svg>
         </div>
         <div class="about-copy">
