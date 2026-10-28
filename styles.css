@@ -302,8 +302,11 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 /* Keep the desktop composition proportional to a 1920px wide reference. */
 @media(min-width:1201px){
   html{font-size:1.041666667vw}
-  .hero{height:36.55rem}
-  .hero-art{height:100%;width:auto;aspect-ratio:57.5/38}
+  .hero{height:auto;min-height:36.55rem}
+  .hero-inner{height:auto;min-height:36.55rem}
+  .hero-copy{padding-bottom:6rem}
+  .hero h1{font-size:5.25rem;white-space:nowrap}
+  .hero-art{bottom:0;height:auto;width:auto;aspect-ratio:57.5/38}
   .benefits{height:15.5rem}
   .about{min-height:184rem}
   .about-inner{height:min(49.3rem,calc(100svh - 4.7rem))}
