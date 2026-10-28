@@ -7,13 +7,19 @@
   <meta name="description" content="Friendly, reliable accounting and business support for small businesses and sole traders in West London.">
   <title>Acorn Accounting & Oak Tree Business Services</title>
   <link rel="stylesheet" href="styles.css">
+  <noscript><style>.page-loader{display:none}</style></noscript>
 </head>
 <body>
   <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs><linearGradient id="benefit-gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#d5b572"/><stop offset="55%" stop-color="#b99146"/><stop offset="100%" stop-color="#a77c35"/></linearGradient></defs>
+    <path id="about-leaf-flight-path" d="M52 10 C94 17 7 24 47 35 C88 45 103 55 69 56 C35 57 18 47 41 43 C64 38 90 47 56 62 C12 73 75 75 49 84"/>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
     <symbol id="i-calculator" viewBox="0 0 48 48"><rect x="9" y="4" width="30" height="40" rx="2"/><rect x="14" y="10" width="20" height="8" rx="1"/><path d="M15 24h3m6 0h3m6 0h.1M15 31h3m6 0h3m6 0h.1M15 38h3m6 0h3m6-7v7"/></symbol>
     <symbol id="i-growth" viewBox="0 0 48 48"><path d="M5 40h38M9 37v-7h7v7m5 0V24h7v13m5 0V17h7v20M7 23l12-11 8 6L42 5m-8 0h8v8"/></symbol>
     <symbol id="i-people" viewBox="0 0 48 48"><circle cx="24" cy="14" r="7"/><path d="M11 40v-5c0-7 5-12 13-12s13 5 13 12v5H11ZM7 39H3v-4c0-5 3-9 8-10m30 14h4v-4c0-5-3-9-8-10M8 14a5 5 0 0 0 2 9m30-9a5 5 0 0 1-2 9"/></symbol>
+    <symbol id="i-person" viewBox="0 0 48 48"><circle cx="24" cy="13" r="7"/><path d="M9 42v-5c0-9 6-14 15-14s15 5 15 14v5H9Z"/></symbol>
+    <symbol id="i-building" viewBox="0 0 48 48"><path d="M10 44V5h28v39M5 44h38M18 13h4m5 0h4m-13 8h4m5 0h4m-13 8h4m5 0h4m-10 15V36h6v8"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 48 48"><rect x="6" y="15" width="36" height="27" rx="2"/><path d="M17 15V9h14v6M6 27c10 5 26 5 36 0M21 31h6"/></symbol>
     <symbol id="i-shield" viewBox="0 0 48 48"><path d="M24 3 41 10v12c0 11-7 18-17 23C14 40 7 33 7 22V10L24 3Z"/><path d="m16 24 6 6 11-13"/></symbol>
     <symbol id="i-file" viewBox="0 0 48 48"><path d="M10 4h20l8 8v32H10zM30 4v9h8M16 22h16M16 29h16M16 36h13"/></symbol>
     <symbol id="i-percent" viewBox="0 0 48 48"><circle cx="15" cy="15" r="5"/><circle cx="33" cy="33" r="5"/><path d="M12 37 36 11"/></symbol>
@@ -25,16 +31,44 @@
     <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h4l2 5-2.5 2.5a15 15 0 0 0 4 4L16 12l5 2v4c0 2-2 3-4 3C9 20 4 15 3 7c0-2 1-4 3-4Z"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m4 7 8 6 8-6"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-7 7-13a7 7 0 1 0-14 0c0 6 7 13 7 13Z"/><circle cx="12" cy="9" r="2"/></symbol>
+    <symbol id="i-advice" viewBox="0 0 48 48"><path d="M9 10h30a4 4 0 0 1 4 4v17a4 4 0 0 1-4 4H22L12 42v-7H9a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4Z"/><path d="m16 23 5 5 11-12"/></symbol>
+    <symbol id="i-clear-price" viewBox="0 0 48 48"><path d="M13 5h22l6 6v32H13l-6-5V10l6-5Z"/><path d="M13 5v33l-6 0M25 15c-5 0-7 3-7 7 0 3 2 5 2 8 0 2-1 4-3 6h16M16 25h15"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 48 48"><path d="M24 40 7.5 24C-1 15 11 3 20 11l4 4 4-4c9-8 21 4 12.5 13L24 40Z"/></symbol>
   </svg>
+
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader-mark">
+      <svg class="loader-tree" viewBox="0 0 180 180" focusable="false" aria-hidden="true">
+        <path class="loader-draw loader-trunk" d="M90 153c-1-18 0-34 4-48 4-13 8-24 6-41"/>
+        <path class="loader-draw loader-branch loader-branch-left" d="M93 113C83 96 70 91 57 88"/>
+        <path class="loader-draw loader-branch loader-branch-right" d="M96 96c11-15 23-22 37-25"/>
+        <path class="loader-draw loader-branch loader-branch-top" d="M99 74c-5-10-13-17-23-21"/>
+        <path class="loader-leaf loader-leaf-one" d="M58 88C44 91 35 82 34 68c14 0 25 7 24 20Z"/>
+        <path class="loader-leaf loader-leaf-two" d="M74 53c-9-8-10-20-4-30 11 7 15 18 4 30Z"/>
+        <path class="loader-leaf loader-leaf-three" d="M101 64c-3-14 3-25 16-31 5 13 1 26-16 31Z"/>
+        <path class="loader-leaf loader-leaf-four" d="M133 71c7-12 19-17 32-13-3 14-14 22-32 13Z"/>
+        <path class="loader-leaf loader-leaf-five" d="M82 98c-11 2-21-3-26-13 11-5 22-1 26 13Z"/>
+        <path class="loader-draw loader-ground" d="M67 154h46"/>
+      </svg>
+      <span class="page-loader-name">Acorn Accounting</span>
+      <span class="page-loader-subtitle">Oak Tree Business Services</span>
+    </div>
+  </div>
 
   <header class="site-header" id="home">
     <div class="header-inner">
-      <a class="brand" href="#home" aria-label="Acorn Accounting home"><img class="brand-symbol" src="logo-icon.svg" alt=""><span class="brand-wordmark">Acorn Accounting<small>Oak Tree Business Services</small></span></a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#resources">Resources</a><a href="#contact">Contact</a>
+      <a class="brand" href="#home" aria-label="Acorn Accounting home"><img class="brand-symbol" src="logo-icon.svg" alt=""><span class="brand-wordmark">Acorn Accounting<i class="brand-divider" aria-hidden="true">&amp;</i><small>Oak Tree Business Services</small></span></a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a class="active" href="#home">Home</a>
+        <a class="mobile-nav-link" href="#about">About</a>
+        <a class="mobile-nav-link" href="#services">Services</a>
+        <a class="mobile-nav-link" href="#pricing">Pricing</a>
+        <a class="mobile-nav-link" href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
+        <span class="mobile-nav-note" aria-hidden="true">Good things grow together.</span>
       </nav>
       <a class="button button-dark header-cta" href="#contact">Get In Touch</a>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="main-nav" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -42,10 +76,9 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-inner">
         <div class="hero-copy">
-          <h1 id="hero-title">Helping Your<br>Business Grow</h1>
+          <h1 id="hero-title">Helping Your<br>Business <span class="grow-word">Gro<span class="grow-letter">w</span><svg class="grow-sprig" viewBox="0 0 72 68" aria-hidden="true" focusable="false"><path class="grow-sprig-stem" d="M4 69C9 53 15 40 22 33C30 25 39 19 49 10"/><path class="grow-sprig-leaf grow-sprig-leaf-mid" d="M22 35C13 32 10 25 13 18C23 22 27 28 22 35Z"/><path class="grow-sprig-leaf grow-sprig-leaf-side" d="M18 41C28 35 40 38 47 45C41 52 29 52 18 41Z"/><path class="grow-sprig-leaf grow-sprig-leaf-tip" d="M44 11C47 0 59 -3 69 0C66 13 55 18 44 11Z"/></svg></span></h1>
           <p class="hero-intro">Friendly, reliable and professional accounting services for small businesses and sole traders. We take care of the numbers, so you can focus on what you do best.</p>
           <div class="hero-actions"><a class="button button-dark" href="#contact">Get In Touch</a><a class="button button-outline" href="#services">Our Services</a></div>
-          <ul class="hero-trust"><li><svg><use href="#i-check"/></svg> Expert Advice</li><li><svg><use href="#i-check"/></svg> Competitive Prices</li><li><svg><use href="#i-check"/></svg> Personal Service</li></ul>
         </div>
       </div>
       <div class="hero-art" aria-hidden="true">
@@ -54,82 +87,217 @@
             <mask id="hero-frame-mask" x="0" y="0" width="1457" height="1080" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" style="mask-type:alpha">
               <image href="assets/hero-window-mask.png" x="0" y="0" width="1457" height="1080" preserveAspectRatio="none"/>
             </mask>
+            <filter id="hero-paper-key" color-interpolation-filters="sRGB">
+              <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1.45 -1.45 -1.45 0 4.2" result="warm-paper"/>
+              <feComposite in="warm-paper" in2="SourceAlpha" operator="in"/>
+            </filter>
+            <filter id="hero-invert-alpha">
+              <feComponentTransfer in="SourceAlpha"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer>
+            </filter>
+            <mask id="hero-photo-window" x="0" y="0" width="1457" height="1080" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" style="mask-type:alpha">
+              <image href="assets/hero-window-mask.png" x="0" y="0" width="1457" height="1080" preserveAspectRatio="none" filter="url(#hero-invert-alpha)"/>
+            </mask>
+            <linearGradient id="hero-frame-top-fade" x1="0" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+              <stop offset="1" stop-color="#fff" stop-opacity="1"/>
+            </linearGradient>
+            <mask id="hero-frame-top-mask" x="0" y="0" width="1457" height="1080" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" style="mask-type:alpha">
+              <rect width="1457" height="1080" fill="url(#hero-frame-top-fade)"/>
+            </mask>
+            <clipPath id="hero-rounded-photo" clipPathUnits="userSpaceOnUse">
+              <ellipse cx="1015" cy="540" rx="850" ry="800"/>
+            </clipPath>
+            <clipPath id="hero-rounded-photo-mobile" clipPathUnits="userSpaceOnUse">
+              <path id="hero-rounded-photo-mobile-path" d="M790 25 A667 515 0 0 1 1457 540 C1457 760 1430 970 1380 1010 Q690 1210 0 950 L123 540 A667 515 0 0 1 790 25Z"/>
+            </clipPath>
           </defs>
-          <!-- Change this image href to replace only the photograph. The complete artwork above it is a single image asset. -->
-          <image class="hero-photo" href="assets/hero-composite.png" x="0" y="0" width="1457" height="1080" preserveAspectRatio="xMidYMid slice"/>
-          <image href="assets/hero-composite.png" x="0" y="0" width="1457" height="1080" preserveAspectRatio="none" mask="url(#hero-frame-mask)"/>
+          <!-- Change this href to swap the photograph while retaining the artwork and mask. -->
+          <image class="hero-photo" href="assets/hero-options/laptop.png" x="140" y="0" width="1457" height="1080" preserveAspectRatio="none" clip-path="url(#hero-rounded-photo)"/>
+          <g class="hero-frame-art"><image class="hero-frame-overlay" href="assets/hero-composite.png" x="0" y="0" width="1457" height="1080" preserveAspectRatio="none" mask="url(#hero-frame-mask)"/></g>
         </svg>
       </div>
     </section>
 
-    <section class="benefits dark-leaves" aria-label="Our approach">
-      <svg class="benefits-wave" viewBox="0 0 1440 310" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q720 85 1440 0V310H0Z" fill="#003b2d"/></svg>
+    <section class="benefits" aria-label="Who we help">
+      <svg class="benefits-wave" viewBox="0 0 1440 310" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <radialGradient id="benefits-glow" cx="50%" cy="48%" rx="70%" ry="105%">
+            <stop offset="0%" stop-color="#0f5543" stop-opacity=".2"/>
+            <stop offset="58%" stop-color="#0a4939" stop-opacity=".09"/>
+            <stop offset="100%" stop-color="#002e24" stop-opacity=".08"/>
+          </radialGradient>
+        </defs>
+        <path d="M0 0 Q720 85 1440 0V310H0Z" fill="#003b2d"/>
+        <path d="M0 0 Q720 85 1440 0V310H0Z" fill="url(#benefits-glow)"/>
+      </svg>
+      <div class="benefits-leaves" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
       <div class="benefits-grid">
-        <article><svg class="benefit-icon"><use href="#i-calculator"/></svg><h2>Accounts &amp; Tax</h2><p>Stay compliant with hassle-free bookkeeping, accounts and tax returns.</p></article>
-        <article><svg class="benefit-icon"><use href="#i-growth"/></svg><h2>Business Advice</h2><p>Practical guidance to help you make confident decisions and grow.</p></article>
-        <article><svg class="benefit-icon"><use href="#i-people"/></svg><h2>Sole Traders &amp; SMEs</h2><p>Tailored support for businesses at every stage, from startup to expansion.</p></article>
-        <article><svg class="benefit-icon"><use href="#i-shield"/></svg><h2>Personal Service</h2><p>Direct access, clear communication and a team that genuinely cares.</p></article>
+        <article><svg class="benefit-icon" aria-hidden="true"><use href="#i-person"/></svg><h2>Sole Traders</h2></article>
+        <article><svg class="benefit-icon" aria-hidden="true"><use href="#i-building"/></svg><h2>Limited Companies</h2></article>
+        <article><svg class="benefit-icon" aria-hidden="true"><use href="#i-briefcase"/></svg><h2>Contractors</h2></article>
       </div>
     </section>
 
     <section class="about section-cream" id="about" aria-labelledby="about-title">
       <div class="about-inner">
-        <div class="about-art" aria-hidden="true">
-          <svg class="about-shape" viewBox="0 0 1221 1288" preserveAspectRatio="xMidYMid meet">
+        <div class="about-art" aria-hidden="true" data-about-reveal>
+          <svg class="about-shape" viewBox="75 35 1095 1140" preserveAspectRatio="xMidYMid meet">
             <defs>
               <mask id="about-frame-mask" x="0" y="0" width="1221" height="1288" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" style="mask-type:alpha">
                 <image href="assets/about-window-mask.png" x="0" y="0" width="1221" height="1288" preserveAspectRatio="none"/>
               </mask>
+              <filter id="about-invert-alpha">
+                <feComponentTransfer in="SourceAlpha"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer>
+              </filter>
+              <mask id="about-photo-window" x="0" y="0" width="1221" height="1288" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" style="mask-type:alpha">
+                <image href="assets/about-window-mask.png" x="0" y="0" width="1221" height="1288" preserveAspectRatio="none" filter="url(#about-invert-alpha)"/>
+              </mask>
+              <filter id="about-paper-key" color-interpolation-filters="sRGB">
+                <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1.45 -1.45 -1.45 0 4.2" result="artwork"/>
+                <feComposite in="artwork" in2="SourceAlpha" operator="in"/>
+              </filter>
             </defs>
             <!-- Change this href to replace the tree photo inside the complete artwork. -->
-            <image class="about-photo" href="assets/about-composite.png" x="0" y="0" width="1221" height="1288" preserveAspectRatio="xMidYMid slice"/>
-            <image href="assets/about-composite.png" x="0" y="0" width="1221" height="1288" preserveAspectRatio="none" mask="url(#about-frame-mask)"/>
+            <image class="about-photo" href="assets/about-composite.png" x="0" y="0" width="1221" height="1288" preserveAspectRatio="xMidYMid slice" mask="url(#about-photo-window)"/>
+            <image href="assets/about-composite.png" x="0" y="0" width="1221" height="1288" preserveAspectRatio="none" mask="url(#about-frame-mask)" filter="url(#about-paper-key)"/>
           </svg>
         </div>
         <div class="about-copy">
-          <p class="eyebrow line-right">About Us</p>
-          <h2 id="about-title">More Than Just<br>Numbers</h2>
-          <p>At Acorn Accounting &amp; Oak Tree Business Services, we believe in building long-term relationships with our clients. We're not just here to crunch numbers — we're here to support your goals, solve problems and help your business thrive.</p>
-          <a class="button button-dark button-small" href="#contact">Learn More</a>
-        </div>
-        <div class="about-values">
-          <article><svg class="value-icon solid"><use href="#i-leaf"/></svg><div><h3>Trusted &amp; Experienced</h3><p>Years of industry experience across a range of sectors.</p></div></article>
-          <article><svg class="value-icon"><use href="#i-handshake"/></svg><div><h3>Proactive Support</h3><p>We don't just react — we look ahead and plan with you.</p></div></article>
-          <article><svg class="value-icon solid"><use href="#i-tree"/></svg><div><h3>Local &amp; Approachable</h3><p>Real people, real support, right when you need it.</p></div></article>
+          <h2 id="about-title" data-about-reveal>More Than Just<br><span>Numbers</span></h2>
+          <p data-about-reveal>At Acorn Accounting &amp; Oak Tree Business Services, we believe in building long-term relationships with our clients. We're not just here to crunch numbers — we're here to support your goals, solve problems and help your business thrive.</p>
+          <a class="button button-dark button-small" href="#contact" data-about-reveal>Learn More</a>
         </div>
       </div>
+      <svg class="about-falling-leaf" viewBox="0 0 42 62" aria-hidden="true" focusable="false">
+        <path d="M5 53C7 35 17 10 37 3C37 29 26 47 5 53Z" fill="#0a5a40"/>
+        <path d="M4 56C13 41 25 22 36 7" fill="none" stroke="#9cbea6" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
     </section>
 
     <section class="services" id="services" aria-labelledby="services-title">
       <div class="services-inner">
-        <p class="eyebrow centered">Our Services</p>
-        <h2 id="services-title">What We Can Do For You</h2>
-        <p class="section-intro">From day-to-day bookkeeping to strategic business advice, we offer a full range of<br class="desktop-only"> accounting and business support services tailored to your needs.</p>
+        <h2 id="services-title" data-reveal>What We Can Do<br><span>For You</span></h2>
+        <p class="section-intro" data-reveal>From day-to-day bookkeeping to strategic business advice, we offer a full range of<br class="desktop-only"> accounting and business support services tailored to your needs.</p>
         <div class="services-grid">
-          <article class="service-card"><span class="service-icon"><svg><use href="#i-calculator"/></svg></span><div><h3>Bookkeeping</h3><p>Keep your finances organised<br>and up to date.</p></div></article>
-          <article class="service-card"><span class="service-icon"><svg><use href="#i-file"/></svg></span><div><h3>Annual Accounts</h3><p>Accurate, compliant and<br>on time.</p></div></article>
-          <article class="service-card"><span class="service-icon round"><svg><use href="#i-percent"/></svg></span><div><h3>Self Assessment Tax Returns</h3><p>Take the stress out of<br>tax season.</p></div></article>
-          <article class="service-card"><span class="service-icon round"><svg><use href="#i-pound"/></svg></span><div><h3>VAT Services</h3><p>Registration, returns and<br>ongoing support.</p></div></article>
-          <article class="service-card"><span class="service-icon"><svg><use href="#i-growth"/></svg></span><div><h3>Business Advisory</h3><p>Strategic advice for<br>your next chapter.</p></div></article>
-          <article class="service-card"><span class="service-icon"><svg><use href="#i-laptop"/></svg></span><div><h3>Company Formation</h3><p>Get your business off<br>the ground.</p></div></article>
+          <a class="service-card" href="#contact" data-reveal><span class="service-icon"><svg><use href="#i-calculator"/></svg></span><div><h3>Bookkeeping</h3><p>Keep your finances organised<br>and up to date.</p></div></a>
+          <a class="service-card" href="#contact" data-reveal><span class="service-icon"><svg><use href="#i-file"/></svg></span><div><h3>Annual Accounts</h3><p>Accurate, compliant and<br>on time.</p></div></a>
+          <a class="service-card" href="#contact" data-reveal><span class="service-icon"><svg><use href="#i-percent"/></svg></span><div><h3>Self Assessment Tax Returns</h3><p>Take the stress out of<br>tax season.</p></div></a>
+          <a class="service-card" href="#contact" data-reveal><span class="service-icon"><svg><use href="#i-pound"/></svg></span><div><h3>VAT Services</h3><p>Registration, returns and<br>ongoing support.</p></div></a>
+          <a class="service-card" href="#contact" data-reveal><span class="service-icon"><svg><use href="#i-growth"/></svg></span><div><h3>Business Advisory</h3><p>Strategic advice for<br>your next chapter.</p></div></a>
+          <a class="service-card" href="#contact" data-reveal><span class="service-icon"><svg><use href="#i-laptop"/></svg></span><div><h3>Company Formation</h3><p>Get your business off<br>the ground.</p></div></a>
+        </div>
+        <a class="button button-dark services-cta" href="#contact" data-reveal>Discuss Your Needs</a>
+      </div>
+    </section>
+
+    <section class="industries" aria-labelledby="industries-title">
+      <div class="industries-inner">
+        <div class="industries-copy">
+          <h2 id="industries-title" data-reveal>Every industry.<br><span>Every ambition.</span></h2>
+          <p data-reveal>From established firms to people building something new, we tailor our accounting support to the way you work. These are just a few of the businesses we help.</p>
+        </div>
+        <div class="industry-reel" aria-label="We support every industry, including yours" data-reveal>
+          <div class="industry-reel-window" aria-hidden="true"><div class="industry-reel-track">
+            <span class="industry-reel-item is-current">Retail &amp; ecommerce</span>
+            <span class="industry-reel-item is-next">Hospitality</span>
+            <span class="industry-reel-item">Healthcare</span>
+            <span class="industry-reel-item">Property</span>
+            <span class="industry-reel-item">Construction</span>
+            <span class="industry-reel-item">Technology</span>
+            <span class="industry-reel-item">Creative businesses</span>
+            <span class="industry-reel-item">Trades</span>
+            <span class="industry-reel-item">Professional services</span>
+            <span class="industry-reel-item is-previous">Charities</span>
+          </div></div>
+          <div class="industry-reel-static">Every industry</div>
+          <div class="industry-reel-footer">And yours.</div>
         </div>
       </div>
     </section>
 
-    <section class="split-section" id="pricing" aria-label="Why choose us and client testimonial">
-      <div class="why dark-leaves">
-        <div class="why-copy"><p class="eyebrow">Why Choose Us</p><h2>Your Success Is Our Priority</h2>
-          <ul><li><span><svg><use href="#i-check"/></svg></span>Competitive, transparent pricing</li><li><span><svg><use href="#i-check"/></svg></span>Clear, jargon-free advice</li><li><span><svg><use href="#i-check"/></svg></span>Flexible support to suit your needs</li><li><span><svg><use href="#i-check"/></svg></span>A partner you can rely on</li></ul>
-          <p class="signature"><span></span>Your business. Our support.</p>
+    <section class="why-choose" id="pricing" aria-labelledby="why-title">
+      <div class="why-choose-inner">
+        <div class="why-choose-heading" data-reveal>
+          <h2 id="why-title">Why choose <span>Acorn?</span></h2>
+          <p>Good accounting should make your next decision feel clearer. We keep the advice practical and the relationship personal.</p>
         </div>
+        <div class="why-choose-grid">
+          <article data-reveal><span class="why-icon" aria-hidden="true"><svg><use href="#i-advice"/></svg></span><h3>Clear advice</h3><p>Straight answers in plain language, so you know where you stand.</p></article>
+          <article data-reveal><span class="why-icon" aria-hidden="true"><svg><use href="#i-clear-price"/></svg></span><h3>Transparent pricing</h3><p>Know what support you are getting and what it will cost.</p></article>
+          <article data-reveal><span class="why-icon" aria-hidden="true"><svg><use href="#i-heart"/></svg></span><h3>Personal approach</h3><p>Work with real people who get to know your business and are here when you need them.</p></article>
+        </div>
+        <a class="button button-dark why-choose-cta" href="#contact" data-reveal>Let's Talk</a>
       </div>
-      <div class="testimonial" id="resources"><div class="testimonial-inner"><p class="eyebrow">Client Testimonials</p><h2>What Our Clients Say</h2><blockquote><span aria-hidden="true">“</span><p>“Acorn Accounting has been fantastic to work with. They're knowledgeable, responsive and always go the extra mile. I finally feel in control of my finances!”</p></blockquote><p class="quote-name">Sarah Mitchell</p><p class="quote-role">Small Business Owner</p><div class="testimonial-controls"><div class="dots" aria-label="Testimonial 1 of 1"><span class="selected"></span><span></span><span></span></div><div class="quote-arrows"><button type="button" aria-label="Previous testimonial" disabled>‹</button><button type="button" aria-label="Next testimonial" disabled>›</button></div></div></div></div>
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-title"><div class="contact-inner"><div class="contact-copy"><p class="eyebrow">Get In Touch</p><h2 id="contact-title">Let’s Talk About<br>Your Business</h2><p>Get in touch today for a free, no-obligation consultation.<br>We'd love to hear from you.</p></div><form class="contact-form" id="contact-form"><div class="form-row"><label><span class="visually-hidden">Full Name</span><input type="text" name="name" placeholder="Full Name *" autocomplete="name" required></label><label><span class="visually-hidden">Email Address</span><input type="email" name="email" placeholder="Email Address *" autocomplete="email" required></label></div><label><span class="visually-hidden">Phone Number</span><input type="tel" name="phone" placeholder="Phone Number *" autocomplete="tel" required></label><label><span class="visually-hidden">How can we help?</span><select name="service" required><option value="" selected disabled>How can we help? * — Please select</option><option>Bookkeeping</option><option>Annual accounts</option><option>Self assessment tax returns</option><option>VAT services</option><option>Business advisory</option><option>Company formation</option><option>Other enquiry</option></select></label><button class="button button-dark button-small" type="submit">Send Message</button><p class="form-note" role="status" aria-live="polite"></p></form></div></section>
+    <section class="how-it-works dark-leaves" aria-labelledby="how-title">
+      <div class="how-inner">
+        <div class="how-heading" data-reveal><h2 id="how-title">How it <span>works</span></h2>
+          <p class="how-intro">Getting started should feel simple. Here is how we begin.</p></div>
+        <div class="how-steps">
+          <article data-reveal><span class="step-number">1</span><h3>Tell us what you need</h3><p>Book a free conversation and tell us about your business and the help you need.</p></article>
+          <article data-reveal><span class="step-number">2</span><h3>Get your plan and price</h3><p>We recommend the right services, explain what's included and give you a clear quote.</p></article>
+          <article data-reveal><span class="step-number">3</span><h3>We handle the numbers</h3><p>Once you're happy, we set things up, take care of the agreed work and keep you updated.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial" id="resources" aria-labelledby="testimonial-title">
+      <div class="testimonial-inner">
+        <h2 id="testimonial-title" data-reveal>Why clients <span>trust us.</span></h2>
+        <div class="testimonial-carousel" data-reveal>
+          <div class="testimonial-viewport" role="region" aria-label="Client reviews" tabindex="0">
+            <div class="testimonial-track">
+              <figure class="testimonial-slide is-active">
+                <blockquote>Acorn Accounting has been fantastic to work with. They're knowledgeable, responsive and always go the extra mile. I finally feel in control of my finances!</blockquote>
+                <figcaption><strong>Sarah Mitchell</strong><small>Small Business Owner</small></figcaption>
+              </figure>
+              <figure class="testimonial-slide">
+                <span class="testimonial-sample">Sample review</span>
+                <blockquote>Clear answers and steady support make it easier to stay on top of the business and plan what comes next.</blockquote>
+                <figcaption><strong>Example quote</strong><small>Replace with an approved client review</small></figcaption>
+              </figure>
+              <figure class="testimonial-slide">
+                <span class="testimonial-sample">Sample review</span>
+                <blockquote>Everything is explained in plain language. It feels good to have someone who takes the time to understand how we work.</blockquote>
+                <figcaption><strong>Example quote</strong><small>Replace with an approved client review</small></figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="testimonial-controls">
+            <button class="testimonial-arrow" type="button" data-direction="prev" aria-label="Previous review"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m0 0 6-6m-6 6 6 6"/></svg></button>
+            <span class="testimonial-count" aria-live="polite">01 <span>/ 03</span></span>
+            <button class="testimonial-arrow" type="button" data-direction="next" aria-label="Next review"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+      <div class="faq-inner">
+        <div class="faq-heading" data-reveal>
+          <h2 id="faq-title">Frequently asked<br><span>Questions.</span></h2>
+        </div>
+        <div class="faq-list" data-reveal>
+          <details><summary><span>01</span>Who do you work with?<span class="faq-plus" aria-hidden="true">+</span></summary><p>We support sole traders, limited companies and contractors across a wide range of industries.</p></details>
+          <details><summary><span>02</span>Can you help if I’m just starting out?<span class="faq-plus" aria-hidden="true">+</span></summary><p>Yes. We can help you get the accounting essentials in place and discuss company formation if that is right for you.</p></details>
+          <details><summary><span>03</span>Can I switch from another accountant?<span class="faq-plus" aria-hidden="true">+</span></summary><p>Yes. Tell us about your current setup and we can talk through a straightforward handover.</p></details>
+          <details><summary><span>04</span>How much will it cost?<span class="faq-plus" aria-hidden="true">+</span></summary><p>That depends on the support you need. We will explain the scope and pricing clearly before you decide.</p></details>
+          <details><summary><span>05</span>What should I bring to our first conversation?<span class="faq-plus" aria-hidden="true">+</span></summary><p>A short outline of your business, your current setup and what you would like help with is plenty to get started.</p></details>
+          <a class="faq-contact-link" href="#contact">Still have a question? Let’s talk.</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-inner" data-reveal>
+        <div class="contact-copy"><h2 id="contact-title" data-reveal>Let’s Talk About<br>Your Business</h2><p data-reveal>Get in touch for a free, no-obligation conversation about the support you need.</p><a class="button button-dark contact-cta" data-reveal href="mailto:info@acorntreeaccounting.co.uk?subject=Accounting%20Enquiry">Get In Touch</a></div>
+        <div class="contact-details" data-reveal><a href="tel:+442081234567"><svg><use href="#i-phone"/></svg>020 8123 4567</a><a href="mailto:info@acorntreeaccounting.co.uk"><svg><use href="#i-mail"/></svg>info@acorntreeaccounting.co.uk</a><span><svg><use href="#i-pin"/></svg>West London, UK</span></div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer dark-leaves"><div class="footer-inner"><div class="footer-main"><a class="footer-brand" href="#home" aria-label="Acorn Accounting home"><img src="logo-icon-white.svg" alt=""><span>ACORN ACCOUNTING<small>OAK TREE BUSINESS SERVICES</small></span></a><nav class="footer-nav" aria-label="Footer navigation"><div><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#pricing">Pricing</a></div><div><a href="#resources">Resources</a><a href="#contact">Contact</a></div></nav><address class="footer-contact"><a href="tel:+442081234567"><svg><use href="#i-phone"/></svg>020 8123 4567</a><a href="mailto:info@acorntreeaccounting.co.uk"><svg><use href="#i-mail"/></svg>info@acorntreeaccounting.co.uk</a><span><svg><use href="#i-pin"/></svg>West London, UK</span></address></div><div class="footer-bottom"><p>© <span id="year">2026</span> Acorn Accounting &amp; Oak Tree Business Services. All rights reserved.</p><div><a href="mailto:info@acorntreeaccounting.co.uk?subject=Privacy%20Policy%20Request">Privacy Policy</a><span>|</span><a href="mailto:info@acorntreeaccounting.co.uk?subject=Terms%20and%20Conditions%20Request">Terms &amp; Conditions</a></div><div class="socials" aria-hidden="true"><span>in</span><span>f</span></div></div></div></footer>
+  <footer class="site-footer dark-leaves"><div class="footer-inner"><div class="footer-main"><a class="footer-brand" href="#home" aria-label="Acorn Accounting home"><img src="logo-icon-white.svg" alt=""><span>ACORN ACCOUNTING<i class="brand-divider" aria-hidden="true">&amp;</i><small>OAK TREE BUSINESS SERVICES</small></span></a><address class="footer-contact"><a href="tel:+442081234567"><svg><use href="#i-phone"/></svg>020 8123 4567</a><a href="mailto:info@acorntreeaccounting.co.uk"><svg><use href="#i-mail"/></svg>info@acorntreeaccounting.co.uk</a><span><svg><use href="#i-pin"/></svg>West London, UK</span></address></div><div class="footer-bottom"><div class="footer-legal"><p>© <span id="year">2026</span> Acorn Accounting &amp; Oak Tree Business Services. All rights reserved.</p><a href="mailto:info@acorntreeaccounting.co.uk?subject=Terms%20and%20Conditions%20Request">Terms &amp; Conditions</a><a href="mailto:info@acorntreeaccounting.co.uk?subject=Privacy%20Policy%20Request">Privacy Policy</a></div><div class="footer-credit">made with <span aria-label="love">❤️</span> by <a href="https://sitehoney.co.uk" target="_blank" rel="noopener noreferrer">sitehoney.co.uk</a></div></div></div></footer>
   <script src="script.js"></script>
 </body>
 </html>
