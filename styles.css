@@ -3,7 +3,7 @@
 @font-face{font-family:"Plus Jakarta Sans";src:url("assets/fonts/plus-jakarta-sans-600.ttf") format("truetype");font-style:normal;font-weight:600;font-display:swap}
 :root{--green:#053b2d;--green-deep:#003629;--gold:#b99146;--cream:#faf9f5;--paper:#f5efe4;--paper-gradient:linear-gradient(90deg,var(--paper) 0%,#fcf9f2 44%,#fcf9f2 100%);--ink:#07372d}
 *{box-sizing:border-box}
-html{font-size:min(1.05vw,20px);scroll-behavior:smooth;scroll-padding-top:4.7rem;scroll-snap-type:y proximity}
+html{font-size:clamp(15px,1.05vw,20px);scroll-behavior:smooth;scroll-padding-top:4.7rem;scroll-snap-type:y proximity}
 body{margin:0;background:var(--paper-gradient);color:var(--ink);font-family:"Plus Jakarta Sans",Arial,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased}
 button,input,select{font:inherit}
 button,a{-webkit-tap-highlight-color:transparent}
@@ -306,7 +306,22 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
   .benefits{height:max(15.5rem,calc(100svh - 4.7rem - var(--fold-hero-height) + 2.75rem))}
 }
 
-@media(max-width:760px){
+@media(min-width:1201px) and (max-width:1700px){
+  .hero-art{right:-8vw}
+}
+
+@media(min-width:901px) and (max-width:1200px){
+  .hero{height:auto;display:flex;flex-direction:column}
+  .hero-inner{width:calc(100% - 6rem);height:auto;order:1}
+  .hero-copy{width:min(100%,52rem);margin:auto;padding:3.5rem 0 2rem;text-align:center}
+  .hero h1{font-size:clamp(4.4rem,7vw,6rem)}
+  .hero-intro{width:min(100%,40rem);margin-left:auto;margin-right:auto}
+  .hero-actions{justify-content:center}
+  .hero-art{position:relative;top:auto;right:auto;order:2;width:min(68vw,720px);height:auto;aspect-ratio:57.5/38;align-self:center}
+  .benefits{margin-top:-2.75rem}
+}
+
+@media(max-width:900px){
   .about-falling-leaf{display:none}
   html{font-size:16px;scroll-padding-top:56px}
   .site-header{height:56px}
@@ -486,16 +501,16 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
   .footer-legal a{font-size:inherit;white-space:nowrap}
   .footer-credit{margin-left:auto;font-size:inherit}
 }
-@media(max-width:760px) and (max-height:760px){
+@media(max-width:900px) and (max-height:760px){
   .industries{min-height:0;padding:64px 0}
 }
-@media(max-width:760px) and (max-height:650px){
+@media(max-width:900px) and (max-height:650px){
   .hero-art{width:min(80%,420px);transform:none}
 }
-@media(max-width:760px) and (prefers-reduced-motion:reduce){
+@media(max-width:900px) and (prefers-reduced-motion:reduce){
   .main-nav,.main-nav a,.menu-toggle,.menu-toggle span{transition-duration:.01ms!important;transition-delay:0ms!important}
 }
-@media(max-width:760px) and (max-height:500px){
+@media(max-width:900px) and (max-height:500px){
   .main-nav{padding-top:62px;padding-bottom:12px}
   .main-nav a,.main-nav .mobile-nav-link{font-size:29px;padding:3px 0}
   .main-nav a:last-of-type{margin-top:7px;padding-top:9px}

@@ -90,7 +90,7 @@ const updateHeroExitFade = () => {
   const fadeEnd = Math.max(fadeStart + 1, aboutTop - window.innerHeight * 0.35);
   const progress = Math.max(0, Math.min(1, (window.scrollY - fadeStart) / (fadeEnd - fadeStart)));
   document.documentElement.style.setProperty('--hero-exit-fade', String(progress * progress * (3 - 2 * progress)));
-  if (window.innerWidth <= 760) {
+  if (window.innerWidth <= 900) {
     aboutInner?.style.setProperty('--about-exit-opacity', '1');
     return;
   }
@@ -101,7 +101,7 @@ const updateHeroExitFade = () => {
   const exitEase = exitProgress * exitProgress * (3 - 2 * exitProgress);
   aboutInner?.style.setProperty('--about-exit-opacity', String(1 - exitEase));
 
-  if (aboutLeaf && leafFlightLength && window.innerWidth > 760 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (aboutLeaf && leafFlightLength && window.innerWidth > 900 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const leafStart = aboutTop - window.innerHeight * 0.15;
     const leafEnd = aboutExitStart + window.innerHeight * 0.25;
     const leafProgress = Math.max(0, Math.min(1, (window.scrollY - leafStart) / (leafEnd - leafStart)));
@@ -141,7 +141,7 @@ if (servicesSection) {
   let servicesSnapTimer = 0;
   let assistingServices = false;
   const gentlyCentreServices = () => {
-    if (assistingServices || window.innerWidth <= 760 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (assistingServices || window.innerWidth <= 900 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const bounds = servicesSection.getBoundingClientRect();
     const headerHeight = header?.getBoundingClientRect().height || 0;
     if (bounds.height > window.innerHeight - headerHeight + 20) return;
@@ -238,7 +238,7 @@ const benefits = document.querySelector('.benefits');
 const benefitsWave = document.querySelector('.benefits-wave');
 
 const syncMobileHeroCurve = () => {
-  if (!mobilePhotoCurve || !heroArt || !benefits || !benefitsWave || window.innerWidth > 760) return;
+  if (!mobilePhotoCurve || !heroArt || !benefits || !benefitsWave || window.innerWidth > 900) return;
   const artBounds = heroArt.getBoundingClientRect();
   const bannerBounds = benefitsWave.getBoundingClientRect();
   const artScale = artBounds.width / 1457;
