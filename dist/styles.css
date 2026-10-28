@@ -230,7 +230,7 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 .testimonial-viewport::-webkit-scrollbar{display:none}
 .testimonial-viewport:focus-visible{outline:2px solid var(--gold)}
 .testimonial-track{position:relative;display:flex;width:max-content}
-.testimonial-slide{position:relative;flex:0 0 var(--slide-width);min-height:18rem;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0;scroll-snap-align:center;opacity:.25;transition:opacity .35s ease}
+.testimonial-slide{position:relative;flex:0 0 var(--slide-width);min-height:18rem;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0;padding:1rem 0 .5rem;scroll-snap-align:center;opacity:.25;transition:opacity .35s ease}
 .testimonial-slide.is-active{opacity:1}
 .testimonial-slide blockquote{max-width:42rem;margin:0;color:var(--green);font:400 clamp(1.75rem,2.25vw,2.35rem)/1.45 Georgia,"Times New Roman",serif;letter-spacing:-.022em;text-wrap:balance}
 .testimonial-slide blockquote::before{content:"“";display:block;height:3.4rem;color:var(--gold);font:5.2rem/.75 Georgia,"Times New Roman",serif}
@@ -300,7 +300,7 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 .footer-credit a:hover{text-decoration:underline}
 
 @media(min-width:1200px) and (min-height:780px){
-  :root{--fold-hero-height:max(30rem,min(38rem,calc(100svh - 4.7rem - 15.5rem + 2.75rem)))}
+  :root{--fold-hero-height:max(33rem,min(38rem,calc(100svh - 4.7rem - 15.5rem + 2.75rem)))}
   .hero{height:var(--fold-hero-height)}
   .hero-art{height:100%;width:auto;aspect-ratio:57.5/38}
   .benefits{height:max(15.5rem,calc(100svh - 4.7rem - var(--fold-hero-height) + 2.75rem))}
