@@ -480,10 +480,11 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
   .footer-contact{padding-top:0;gap:12px}
   .footer-contact a,.footer-contact span{white-space:normal;gap:7px;word-break:break-word}
   .footer-contact svg{width:13px;height:13px}
-  .footer-bottom{min-height:0;padding:10px 0 0;align-items:flex-start;flex-wrap:wrap;gap:12px;font-size:9px}
-  .footer-legal p{line-height:1.4}
-  .footer-legal a{font-size:9px}
-  .footer-credit{margin-left:auto;font-size:9px}
+  .footer-bottom{min-height:0;padding:10px 0 0;align-items:center;flex-wrap:wrap;gap:5px;font-size:clamp(6.5px,2.15vw,9px)}
+  .footer-legal{display:contents}
+  .footer-legal p{flex:0 0 100%;line-height:1.4}
+  .footer-legal a{font-size:inherit;white-space:nowrap}
+  .footer-credit{margin-left:auto;font-size:inherit}
 }
 @media(max-width:760px) and (max-height:760px){
   .industries{min-height:0;padding:64px 0}
