@@ -2,28 +2,6 @@ const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
 const header = document.querySelector('.site-header');
 const pageLoader = document.querySelector('.page-loader');
-const growLetter = document.querySelector('.grow-letter');
-const positionIphoneSprig = () => {
-  if (!growLetter || !/iPhone|iPod/.test(navigator.userAgent)) return;
-  if (window.innerWidth > 900) {
-    growLetter.style.removeProperty('--sprig-left');
-    return;
-  }
-  const style = getComputedStyle(growLetter);
-  const fontSize = parseFloat(style.fontSize);
-  const canvas = document.createElement('canvas');
-  const context = canvas.getContext('2d');
-  growLetter.style.setProperty('--sprig-left', 'calc(100% - .01em)');
-  if (!context || !Number.isFinite(fontSize)) return;
-  context.font = `${style.fontStyle} ${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
-  const inkRight = context.measureText('w').actualBoundingBoxRight;
-  if (Number.isFinite(inkRight) && inkRight > 0) {
-    growLetter.style.setProperty('--sprig-left', `${inkRight - fontSize * .04}px`);
-  }
-};
-positionIphoneSprig();
-document.fonts?.ready.then(positionIphoneSprig);
-window.addEventListener('resize', positionIphoneSprig);
 if (pageLoader) {
   const loaderStartedAt = performance.now();
   let pageTransitioning = false;
