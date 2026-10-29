@@ -3,7 +3,7 @@
 @font-face{font-family:"Plus Jakarta Sans";src:url("assets/fonts/plus-jakarta-sans-600.ttf") format("truetype");font-style:normal;font-weight:600;font-display:swap}
 :root{--green:#053b2d;--green-deep:#003629;--gold:#b99146;--cream:#faf9f5;--paper:#f5efe4;--paper-gradient:linear-gradient(90deg,var(--paper) 0%,#fcf9f2 44%,#fcf9f2 100%);--ink:#07372d}
 *{box-sizing:border-box}
-html{font-size:clamp(15px,1.05vw,20px);scroll-behavior:smooth;scroll-padding-top:4.7rem;scroll-snap-type:y proximity}
+html{font-size:clamp(15px,1.05vw,20px);scroll-behavior:smooth;scroll-padding-top:4.7rem;scroll-snap-type:y proximity;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{margin:0;background:var(--paper-gradient);color:var(--ink);font-family:"Plus Jakarta Sans",Arial,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased}
 button,input,select{font:inherit}
 button,a{-webkit-tap-highlight-color:transparent}
@@ -68,9 +68,9 @@ h1,h2,h3,p{margin-top:0}
 h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 .hero h1{font-size:5.82rem;line-height:.98;letter-spacing:-.035em;margin:0 0 1.22rem}
 .grow-word{display:inline-block;position:relative;white-space:nowrap}
-.grow-letter{display:inline-block;transform-origin:80% 65%}
-.grow-sprig{position:absolute;left:calc(100% - .05em);top:-.18em;width:.425em;height:.68em;overflow:visible;pointer-events:none}
-@media(min-width:901px) and (max-width:2200px){.grow-sprig{left:calc(100% - .08em)}}
+.grow-letter{display:inline-block;position:relative;letter-spacing:normal;margin-right:-.035em;transform-origin:80% 65%}
+.grow-sprig{position:absolute;left:calc(100% - .085em);top:-.18em;width:.425em;height:.68em;overflow:visible;pointer-events:none}
+@media(min-width:901px) and (max-width:2200px){.grow-sprig{left:calc(100% - .115em)}}
 .grow-sprig-stem{fill:none;stroke:var(--green);stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100}
 .grow-sprig-leaf{fill:var(--green);transform-box:fill-box;transform-origin:center;transform:scale(1) rotate(0)}
 .grow-sprig-leaf-mid{transform-origin:100% 100%}
@@ -334,7 +334,8 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 }
 
 @media(max-width:900px){
-  .grow-sprig{left:calc(100% - .08em)}
+  .grow-letter{margin-right:-.05em}
+  .grow-sprig{left:calc(100% - .13em)}
   .about-falling-leaf{display:none}
   html{font-size:16px;scroll-padding-top:56px;scroll-snap-type:none}
   .industries,.faq,.testimonial-slide{scroll-snap-align:none}
