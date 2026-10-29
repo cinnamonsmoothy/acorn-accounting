@@ -8,7 +8,7 @@ if (pageLoader) {
   let pageVisible = false;
   const growWord = document.querySelector('.grow-word');
   const wait = (milliseconds) => new Promise((resolve) => window.setTimeout(resolve, milliseconds));
-  const loaderDuration = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 10 : window.innerWidth <= 900 ? 350 : 490;
+  const loaderDuration = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 10 : window.innerWidth <= 900 ? 500 : 490;
   const startGrowWhenVisible = () => {
     if (!pageVisible || !growWord || document.documentElement.classList.contains('grow-animation-started')) return;
     const bounds = growWord.getBoundingClientRect();
@@ -30,7 +30,7 @@ if (pageLoader) {
   });
   window.addEventListener('scroll', startGrowWhenVisible, { passive: true });
   const revealInitialPage = () => {
-    const minimumTime = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : window.innerWidth <= 900 ? 320 : 760;
+    const minimumTime = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : window.innerWidth <= 900 ? 1150 : 760;
     window.setTimeout(hideLoader, Math.max(0, minimumTime - (performance.now() - loaderStartedAt)));
   };
   if (document.readyState === 'complete') revealInitialPage();
