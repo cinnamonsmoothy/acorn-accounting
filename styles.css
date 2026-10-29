@@ -65,7 +65,7 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 .grow-word{display:inline-block;position:relative;white-space:nowrap}
 .grow-letter{display:inline-block;transform-origin:80% 65%}
 .grow-sprig{position:absolute;left:calc(100% - .05em);top:-.18em;width:.425em;height:.68em;overflow:visible;pointer-events:none}
-@media(min-width:901px) and (max-width:2200px){.grow-sprig{left:calc(100% - .09em)}}
+@media(min-width:901px) and (max-width:2200px){.grow-sprig{left:calc(100% - .08em)}}
 .grow-sprig-stem{fill:none;stroke:var(--green);stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100}
 .grow-sprig-leaf{fill:var(--green);transform-box:fill-box;transform-origin:center;transform:scale(1) rotate(0)}
 .grow-sprig-leaf-mid{transform-origin:100% 100%}
@@ -329,7 +329,7 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 }
 
 @media(max-width:900px){
-  .grow-sprig{left:calc(100% - .10em)}
+  .grow-sprig{left:calc(100% - .08em)}
   .about-falling-leaf{display:none}
   html{font-size:16px;scroll-padding-top:56px;scroll-snap-type:none}
   .industries,.faq,.testimonial-slide{scroll-snap-align:none}
@@ -347,6 +347,7 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
   body.menu-open{overflow:hidden}
   .site-header.menu-open{background:var(--green-deep);box-shadow:none}
   .site-header.menu-open .brand{visibility:hidden;opacity:0}
+  .site-header.menu-closing .brand{visibility:hidden;opacity:0}
   .site-header.menu-open .header-cta{visibility:hidden}
   .site-header.menu-closing{background:transparent;box-shadow:none}
   .site-header.menu-closing::before{content:"";position:absolute;inset:0;z-index:2;background:var(--paper-gradient);pointer-events:none}
@@ -381,7 +382,7 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
   .hero-intro{width:min(100%,460px);font-size:12px;line-height:1.65;margin:0 auto 16px}
   .hero-actions{gap:10px;justify-content:center}
   .hero-actions .button{min-width:auto;min-height:40px;padding:7px 16px;font-size:11px}
-  .hero-art{position:relative;order:2;width:min(100%,480px);height:auto;aspect-ratio:1457/1080;margin-top:auto;align-self:center;transform:translateX(-4%)}
+  .hero-art{position:relative;order:2;width:min(100%,480px);height:auto;aspect-ratio:1457/1080;margin-top:auto;align-self:center;transform:translateX(-6%)}
   .hero-art svg{height:100%;width:100%}
   .hero-photo{clip-path:url(#hero-rounded-photo-mobile);mask:url(#hero-photo-window)}
   .hero-frame-art{mask:url(#hero-frame-top-mask)}
@@ -525,7 +526,7 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
   .hero-copy{padding-top:18px}
   .hero h1{margin-bottom:9px}
   .hero-intro{margin-bottom:12px}
-  .hero-art{width:min(67%,270px);transform:none}
+  .hero-art{width:min(67%,270px);transform:translateX(-2%)}
   .benefits{min-height:160px}
 }
 @media(max-width:900px) and (prefers-reduced-motion:reduce){
