@@ -299,29 +299,15 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 .footer-credit a{color:#fff;text-decoration:none}
 .footer-credit a:hover{text-decoration:underline}
 
-/* Keep the desktop composition proportional to a 1920px wide reference. */
+/* Fit the first desktop screen while keeping the original type and artwork scale. */
 @media(min-width:1201px){
-  html{font-size:1.041666667vw}
-  .hero{height:auto;min-height:36.55rem}
-  .hero-inner{height:auto;min-height:36.55rem}
-  .hero-copy{padding-bottom:6rem}
+  :root{--fold-hero-height:max(33rem,min(38rem,calc(100svh - 4.7rem - 15.5rem + 2.75rem)))}
+  .hero{height:auto;min-height:var(--fold-hero-height)}
+  .hero-inner{height:auto;min-height:var(--fold-hero-height)}
+  .hero-copy{padding-bottom:4rem}
   .hero h1{font-size:5.25rem;white-space:nowrap}
   .hero-art{bottom:0;height:auto;width:auto;aspect-ratio:57.5/38}
-  .benefits{height:15.5rem}
-  .about{min-height:184rem}
-  .about-inner{height:min(49.3rem,calc(100svh - 4.7rem))}
-  .about-copy h2{font-size:4.6rem}
-  .services{min-height:44.28rem}
-  .industries{min-height:49.3rem}
-  .industries-copy h2{font-size:4rem}
-  .industry-reel-item{font-size:2.016rem}
-  .why-choose{min-height:39.42rem}
-  .how-inner h2{font-size:4.5rem}
-  .testimonial{min-height:37.8rem}
-  .testimonial h2{font-size:3.12rem}
-  .testimonial-slide blockquote{font-size:2.16rem}
-  .faq{min-height:54rem}
-  .faq-heading h2{font-size:4rem}
+  .benefits{height:max(15.5rem,calc(100svh - 4.7rem - var(--fold-hero-height) + 2.75rem))}
 }
 
 @media(min-width:901px) and (max-width:1200px){
