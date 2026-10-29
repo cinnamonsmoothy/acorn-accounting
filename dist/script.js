@@ -8,6 +8,7 @@ if (pageLoader) {
   let pageVisible = false;
   const growWord = document.querySelector('.grow-word');
   const wait = (milliseconds) => new Promise((resolve) => window.setTimeout(resolve, milliseconds));
+  const loaderDuration = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 10 : window.innerWidth <= 900 ? 350 : 490;
   const startGrowWhenVisible = () => {
     if (!pageVisible || !growWord || document.documentElement.classList.contains('grow-animation-started')) return;
     const bounds = growWord.getBoundingClientRect();
@@ -22,14 +23,14 @@ if (pageLoader) {
   };
   const hideLoader = () => {
     pageLoader.classList.add('is-hidden');
-    window.setTimeout(finishPageReveal, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 30 : 600);
+    window.setTimeout(finishPageReveal, loaderDuration() + 50);
   };
   pageLoader.addEventListener('transitionend', (event) => {
     if (event.target === pageLoader && event.propertyName === 'transform') finishPageReveal();
   });
   window.addEventListener('scroll', startGrowWhenVisible, { passive: true });
   const revealInitialPage = () => {
-    const minimumTime = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 760;
+    const minimumTime = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : window.innerWidth <= 900 ? 320 : 760;
     window.setTimeout(hideLoader, Math.max(0, minimumTime - (performance.now() - loaderStartedAt)));
   };
   if (document.readyState === 'complete') revealInitialPage();
@@ -51,7 +52,7 @@ if (pageLoader) {
     pageLoader.classList.add('is-preparing');
     await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
     pageLoader.classList.remove('is-preparing');
-    await wait(window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 10 : 490);
+    await wait(loaderDuration());
     if (!sameDocument) {
       window.location.assign(destination.href);
       return;
@@ -63,7 +64,7 @@ if (pageLoader) {
     });
     await wait(80);
     hideLoader();
-    window.setTimeout(() => { pageTransitioning = false; }, 490);
+    window.setTimeout(() => { pageTransitioning = false; }, loaderDuration() + 40);
   });
   window.addEventListener('pageshow', (event) => {
     if (event.persisted) {
@@ -269,10 +270,25 @@ if (window.ResizeObserver && benefits && heroArt) {
   curveObserver.observe(heroArt);
 }
 
+let menuCloseTimer;
 const setMenuOpen = (open, restoreFocus = false) => {
+  window.clearTimeout(menuCloseTimer);
+  const wasOpen = nav?.classList.contains('open');
   nav?.classList.toggle('open', open);
   header?.classList.toggle('menu-open', open);
-  document.body.classList.toggle('menu-open', open);
+  if (open) {
+    header?.classList.remove('menu-closing');
+    document.body.classList.add('menu-open');
+  } else if (wasOpen) {
+    header?.classList.add('menu-closing');
+    menuCloseTimer = window.setTimeout(() => {
+      header?.classList.remove('menu-closing');
+      document.body.classList.remove('menu-open');
+    }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 10 : 720);
+  } else {
+    header?.classList.remove('menu-closing');
+    document.body.classList.remove('menu-open');
+  }
   menuButton?.setAttribute('aria-expanded', String(open));
   menuButton?.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   if (restoreFocus) menuButton?.focus();
@@ -296,8 +312,13 @@ document.addEventListener('keydown', (event) => {
     }
   }
 });
-window.matchMedia('(min-width: 761px)').addEventListener('change', (event) => {
+window.matchMedia('(min-width: 901px)').addEventListener('change', (event) => {
   if (event.matches) setMenuOpen(false);
 });
+
+const faqDetails = [...document.querySelectorAll('.faq-list details')];
+faqDetails.forEach((current) => current.addEventListener('toggle', () => {
+  if (current.open) faqDetails.forEach((other) => { if (other !== current) other.open = false; });
+}));
 
 document.querySelector('#year').textContent = String(new Date().getFullYear());

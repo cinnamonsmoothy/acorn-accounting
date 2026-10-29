@@ -73,6 +73,7 @@
   </header>
 
   <main>
+    <div class="hero-stage">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-inner">
         <div class="hero-copy">
@@ -137,6 +138,7 @@
         <article><svg class="benefit-icon" aria-hidden="true"><use href="#i-briefcase"/></svg><h2>Contractors</h2></article>
       </div>
     </section>
+    </div>
 
     <section class="about section-cream" id="about" aria-labelledby="about-title">
       <div class="about-inner">
@@ -179,12 +181,12 @@
         <h2 id="services-title" data-reveal>What We Can Do<br><span>For You</span></h2>
         <p class="section-intro" data-reveal>From day-to-day bookkeeping to strategic business advice, we offer a full range of<br class="desktop-only"> accounting and business support services tailored to your needs.</p>
         <div class="services-grid">
-          <a class="service-card" href="#contact" data-reveal><span class="service-icon"><svg><use href="#i-calculator"/></svg></span><div><h3>Bookkeeping</h3><p>Keep your finances organised<br>and up to date.</p></div></a>
-          <a class="service-card" href="#contact" data-reveal><span class="service-icon"><svg><use href="#i-file"/></svg></span><div><h3>Annual Accounts</h3><p>Accurate, compliant and<br>on time.</p></div></a>
-          <a class="service-card" href="#contact" data-reveal><span class="service-icon"><svg><use href="#i-percent"/></svg></span><div><h3>Self Assessment Tax Returns</h3><p>Take the stress out of<br>tax season.</p></div></a>
-          <a class="service-card" href="#contact" data-reveal><span class="service-icon"><svg><use href="#i-pound"/></svg></span><div><h3>VAT Services</h3><p>Registration, returns and<br>ongoing support.</p></div></a>
-          <a class="service-card" href="#contact" data-reveal><span class="service-icon"><svg><use href="#i-growth"/></svg></span><div><h3>Business Advisory</h3><p>Strategic advice for<br>your next chapter.</p></div></a>
-          <a class="service-card" href="#contact" data-reveal><span class="service-icon"><svg><use href="#i-laptop"/></svg></span><div><h3>Company Formation</h3><p>Get your business off<br>the ground.</p></div></a>
+          <article class="service-card" data-reveal><span class="service-icon"><svg><use href="#i-calculator"/></svg></span><div><h3>Bookkeeping</h3><p>Keep your finances organised<br>and up to date.</p></div></article>
+          <article class="service-card" data-reveal><span class="service-icon"><svg><use href="#i-file"/></svg></span><div><h3>Annual Accounts</h3><p>Accurate, compliant and<br>on time.</p></div></article>
+          <article class="service-card" data-reveal><span class="service-icon"><svg><use href="#i-percent"/></svg></span><div><h3>Self Assessment Tax Returns</h3><p>Take the stress out of<br>tax season.</p></div></article>
+          <article class="service-card" data-reveal><span class="service-icon"><svg><use href="#i-pound"/></svg></span><div><h3>VAT Services</h3><p>Registration, returns and<br>ongoing support.</p></div></article>
+          <article class="service-card" data-reveal><span class="service-icon"><svg><use href="#i-growth"/></svg></span><div><h3>Business Advisory</h3><p>Strategic advice for<br>your next chapter.</p></div></article>
+          <article class="service-card" data-reveal><span class="service-icon"><svg><use href="#i-laptop"/></svg></span><div><h3>Company Formation</h3><p>Get your business off<br>the ground.</p></div></article>
         </div>
         <a class="button button-dark services-cta" href="#contact" data-reveal>Discuss Your Needs</a>
       </div>
@@ -279,11 +281,11 @@
           <h2 id="faq-title">Frequently asked<br><span>Questions.</span></h2>
         </div>
         <div class="faq-list" data-reveal>
-          <details><summary><span>01</span>Who do you work with?<span class="faq-plus" aria-hidden="true">+</span></summary><p>We support sole traders, limited companies and contractors across a wide range of industries.</p></details>
-          <details><summary><span>02</span>Can you help if I’m just starting out?<span class="faq-plus" aria-hidden="true">+</span></summary><p>Yes. We can help you get the accounting essentials in place and discuss company formation if that is right for you.</p></details>
-          <details><summary><span>03</span>Can I switch from another accountant?<span class="faq-plus" aria-hidden="true">+</span></summary><p>Yes. Tell us about your current setup and we can talk through a straightforward handover.</p></details>
-          <details><summary><span>04</span>How much will it cost?<span class="faq-plus" aria-hidden="true">+</span></summary><p>That depends on the support you need. We will explain the scope and pricing clearly before you decide.</p></details>
-          <details><summary><span>05</span>What should I bring to our first conversation?<span class="faq-plus" aria-hidden="true">+</span></summary><p>A short outline of your business, your current setup and what you would like help with is plenty to get started.</p></details>
+          <details name="faq"><summary><span>01</span>Who do you work with?<span class="faq-plus" aria-hidden="true">+</span></summary><p>We support sole traders, limited companies and contractors across a wide range of industries.</p></details>
+          <details name="faq"><summary><span>02</span>Can you help if I’m just starting out?<span class="faq-plus" aria-hidden="true">+</span></summary><p>Yes. We can help you get the accounting essentials in place and discuss company formation if that is right for you.</p></details>
+          <details name="faq"><summary><span>03</span>Can I switch from another accountant?<span class="faq-plus" aria-hidden="true">+</span></summary><p>Yes. Tell us about your current setup and we can talk through a straightforward handover.</p></details>
+          <details name="faq"><summary><span>04</span>How much will it cost?<span class="faq-plus" aria-hidden="true">+</span></summary><p>That depends on the support you need. We will explain the scope and pricing clearly before you decide.</p></details>
+          <details name="faq"><summary><span>05</span>What should I bring to our first conversation?<span class="faq-plus" aria-hidden="true">+</span></summary><p>A short outline of your business, your current setup and what you would like help with is plenty to get started.</p></details>
           <a class="faq-contact-link" href="#contact">Still have a question? Let’s talk.</a>
         </div>
       </div>
@@ -297,7 +299,7 @@
     </section>
   </main>
 
-  <footer class="site-footer dark-leaves"><div class="footer-inner"><div class="footer-main"><a class="footer-brand" href="#home" aria-label="Acorn Accounting home"><img src="logo-icon-white.svg" alt=""><span>ACORN ACCOUNTING<i class="brand-divider" aria-hidden="true">&amp;</i><small>OAK TREE BUSINESS SERVICES</small></span></a><address class="footer-contact"><a href="tel:+442081234567"><svg><use href="#i-phone"/></svg>020 8123 4567</a><a href="mailto:info@acorntreeaccounting.co.uk"><svg><use href="#i-mail"/></svg>info@acorntreeaccounting.co.uk</a><span><svg><use href="#i-pin"/></svg>West London, UK</span></address></div><div class="footer-bottom"><div class="footer-legal"><p>© <span id="year">2026</span> Acorn Accounting &amp; Oak Tree Business Services. All rights reserved.</p><a href="mailto:info@acorntreeaccounting.co.uk?subject=Terms%20and%20Conditions%20Request">Terms &amp; Conditions</a><a href="mailto:info@acorntreeaccounting.co.uk?subject=Privacy%20Policy%20Request">Privacy Policy</a></div><div class="footer-credit">made with <span aria-label="love">❤️</span> by <a href="https://sitehoney.co.uk" target="_blank" rel="noopener noreferrer">sitehoney.co.uk</a></div></div></div></footer>
+  <footer class="site-footer dark-leaves"><div class="footer-inner"><div class="footer-main"><a class="footer-brand" href="#home" aria-label="Acorn Accounting home"><img src="logo-icon-white.svg" alt=""><span>ACORN ACCOUNTING<i class="brand-divider" aria-hidden="true">&amp;</i><small>OAK TREE BUSINESS SERVICES</small></span></a><address class="footer-contact"><a href="tel:+442081234567"><svg><use href="#i-phone"/></svg>020 8123 4567</a><a href="mailto:info@acorntreeaccounting.co.uk"><svg><use href="#i-mail"/></svg>info@acorntreeaccounting.co.uk</a><span><svg><use href="#i-pin"/></svg>West London, UK</span></address></div><div class="footer-bottom"><div class="footer-legal"><p>© <span id="year">2026</span> Acorn Accounting &amp; Oak Tree Business Services. All rights reserved.</p><a href="mailto:info@acorntreeaccounting.co.uk?subject=Terms%20and%20Conditions%20Request">Terms &amp; Conditions</a><a href="mailto:info@acorntreeaccounting.co.uk?subject=Privacy%20Policy%20Request">Privacy Policy</a></div><div class="footer-credit">made with <span aria-label="love">♥</span> by <a href="https://sitehoney.co.uk" target="_blank" rel="noopener noreferrer">sitehoney.co.uk</a></div></div></div></footer>
   <script src="script.js"></script>
 </body>
 </html>
