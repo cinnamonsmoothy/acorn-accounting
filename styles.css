@@ -302,6 +302,7 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 /* Fit the first desktop screen while keeping the original type and artwork scale. */
 @media(min-width:1201px){
   :root{--fold-hero-height:max(33rem,min(38rem,calc(100svh - 4.7rem - 15.5rem + 2.75rem)))}
+  html{font-size:clamp(12px,min(1.05vw,1.851851852svh),20px)}
   .hero{height:auto;min-height:var(--fold-hero-height)}
   .hero-inner{height:auto;min-height:var(--fold-hero-height)}
   .hero-copy{padding-bottom:4rem}
