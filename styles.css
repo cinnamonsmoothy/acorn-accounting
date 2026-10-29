@@ -219,6 +219,29 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 .how-it-works{position:relative;display:flex;align-items:center;overflow:hidden;padding:2.8rem 0;background:radial-gradient(circle at 80% 10%,#125b44 0%,#05402f 38%,#003629 100%);color:#fff}
 .how-it-works.dark-leaves::before{width:23rem;height:23rem;left:-7rem;top:-5rem;transform:rotate(24deg)}
 .how-it-works.dark-leaves::after{width:24rem;height:24rem;right:-7rem;bottom:-7rem;transform:rotate(190deg)}
+.squirrel-runner{position:absolute;z-index:3;top:.3rem;left:-4rem;width:4rem;height:3rem;pointer-events:none;color:#d8b56e}
+.squirrel-runner svg{width:100%;height:100%;overflow:visible;fill:currentColor}
+.squirrel-tail{transform-box:fill-box;transform-origin:90% 85%}
+.squirrel-eye{fill:#003629}
+.squirrel-feet,.squirrel-paws{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.squirrel-acorn{transform-box:fill-box;transform-origin:50% 30%}
+.squirrel-acorn path:first-child{fill:#f5dfab}
+.squirrel-acorn path:nth-child(2){fill:#aa7836}
+.squirrel-acorn path:last-child{fill:none;stroke:#f5dfab;stroke-width:1.5;stroke-linecap:round}
+.squirrel-nibble{fill:none;stroke:#f5dfab;stroke-width:1.4;stroke-linecap:round;opacity:0}
+@media(prefers-reduced-motion:no-preference){
+  .how-it-works.is-running .squirrel-runner{animation:squirrel-cross 6s linear both}
+  .how-it-works.is-running .squirrel-body{animation:squirrel-hop 6s linear both}
+  .how-it-works.is-running .squirrel-tail{animation:squirrel-tail-swish 6s ease-in-out both}
+  .how-it-works.is-running .squirrel-acorn{animation:squirrel-chew 6s linear both}
+  .how-it-works.is-running .squirrel-nibble{animation:squirrel-nibble 6s linear both}
+}
+@keyframes squirrel-cross{0%{transform:translateX(0)}38%,62%{transform:translateX(calc(50vw + 2rem))}100%{transform:translateX(calc(100vw + 8rem))}}
+@keyframes squirrel-hop{0%,8%,16%,24%,32%,38%,62%,70%,78%,86%,94%,100%{transform:translateY(0)}4%,12%,20%,28%,34%,66%,74%,82%,90%,97%{transform:translateY(-2px)}}
+@keyframes squirrel-tail-swish{0%,16%,32%,38%,62%,78%,94%,100%{transform:rotate(-5deg)}8%,24%,70%,86%{transform:rotate(7deg)}47%,55%{transform:rotate(2deg)}}
+@keyframes squirrel-chew{0%,38%,62%,100%{transform:rotate(0)}43%,51%,59%{transform:rotate(-13deg)}47%,55%{transform:rotate(8deg)}}
+@keyframes squirrel-nibble{0%,38%,62%,100%{opacity:0}43%,48%,53%,58%{opacity:1}46%,51%,56%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.how-it-works .squirrel-runner{left:auto;right:1rem}}
 .how-inner{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:5rem}
 .how-inner h2{color:#fff;margin:0 0 1.25rem}
 .how-inner h2 span{color:#d8b56e}
@@ -465,6 +488,7 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
   .why-choose-grid p{font-size:11px;line-height:1.5}
   .why-choose-cta{min-height:39px;margin-top:25px;padding:8px 16px;font-size:11px}
   .how-it-works{min-height:0;padding:46px 0}
+  .squirrel-runner{top:2px;left:-48px;width:48px;height:36px}
   .how-it-works.dark-leaves::before{width:250px;height:250px;left:-120px;top:-75px}
   .how-it-works.dark-leaves::after{width:260px;height:260px;right:-130px;bottom:-80px}
   .how-inner{grid-template-columns:1fr;gap:24px}

@@ -137,6 +137,14 @@ if (revealElements.length && 'IntersectionObserver' in window && window.matchMed
   revealElements.forEach((element) => revealObserver.observe(element));
 }
 
+const howItWorksSection = document.querySelector('.how-it-works');
+if (howItWorksSection && 'IntersectionObserver' in window) {
+  const squirrelObserver = new IntersectionObserver(([entry]) => {
+    howItWorksSection.classList.toggle('is-running', entry.isIntersecting);
+  }, { threshold: 0.2 });
+  squirrelObserver.observe(howItWorksSection);
+}
+
 const servicesSection = document.querySelector('.services');
 if (servicesSection) {
   let servicesSnapTimer = 0;
