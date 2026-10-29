@@ -309,17 +309,18 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
   .service-card:hover,.why-choose-grid article:hover{box-shadow:0 .75rem 2rem rgba(5,59,45,.045);border-color:var(--gold)}
 }
 
-/* Fit the first desktop screen while keeping the original type and artwork scale. */
+/* Keep the desktop artwork proportional to the available viewport width. */
 @media(min-width:1201px){
-  :root{--fold-hero-height:max(33rem,min(38rem,calc(100svh - 4.7rem - 15.5rem + 2.75rem)))}
+  :root{--fold-hero-height:max(26rem,min(38rem,28vw,calc(100svh - 4.7rem - 15.5rem + 2.75rem)))}
   html{font-size:clamp(12px,min(1.05vw,1.851851852svh),20px)}
   .hero{height:auto;min-height:var(--fold-hero-height);overflow:visible}
   .hero-inner{height:auto;min-height:var(--fold-hero-height)}
-  .hero-copy{padding-bottom:4rem}
+  .hero-copy{padding-top:clamp(5rem,6vw,9.5rem);padding-bottom:clamp(2rem,3vw,4rem)}
   .hero h1{font-size:5.25rem;white-space:nowrap}
   .hero-art{bottom:0;height:auto;width:auto;aspect-ratio:57.5/38}
   .hero-art svg{overflow:visible}
   .hero-top-extension{display:block}
+  .header-cta{margin-right:clamp(0px,calc(195px - 7.5vw),110px)}
   .benefits{height:max(15.5rem,calc(100svh - 4.7rem - var(--fold-hero-height) + 2.75rem))}
 }
 
