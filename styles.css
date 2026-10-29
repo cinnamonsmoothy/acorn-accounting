@@ -65,7 +65,7 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 .grow-word{display:inline-block;position:relative;white-space:nowrap}
 .grow-letter{display:inline-block;transform-origin:80% 65%}
 .grow-sprig{position:absolute;left:calc(100% - .05em);top:-.18em;width:.425em;height:.68em;overflow:visible;pointer-events:none}
-@media(min-width:901px) and (max-width:2200px){.grow-sprig{left:calc(100% - .12em)}}
+@media(min-width:901px) and (max-width:2200px){.grow-sprig{left:calc(100% - .09em)}}
 .grow-sprig-stem{fill:none;stroke:var(--green);stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100}
 .grow-sprig-leaf{fill:var(--green);transform-box:fill-box;transform-origin:center;transform:scale(1) rotate(0)}
 .grow-sprig-leaf-mid{transform-origin:100% 100%}
@@ -297,10 +297,9 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 .footer-legal{display:flex;align-items:center;flex-wrap:wrap;gap:.35rem .8rem}
 .footer-legal p{margin:0}
 .footer-legal a{font-size:.6rem;color:rgba(255,255,255,.75)}
-.footer-credit{display:inline-flex;align-items:center;gap:.2em;color:rgba(255,255,255,.75);font-size:.6rem;line-height:1.2;white-space:nowrap}
+.footer-credit{display:inline-flex;align-items:center;gap:.2em;color:rgba(255,255,255,.75);font-size:.6rem;line-height:1.2;white-space:nowrap;text-decoration:none}
 .footer-credit span{color:#e66464;font-size:1.2em;line-height:1}
-.footer-credit a{color:#fff;text-decoration:none}
-.footer-credit a:hover{text-decoration:underline}
+.footer-credit:hover{text-decoration:underline}
 @media(hover:none){
   .service-card:hover,.why-choose-grid article:hover{box-shadow:0 .75rem 2rem rgba(5,59,45,.045);border-color:var(--gold)}
 }
@@ -330,7 +329,7 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 }
 
 @media(max-width:900px){
-  .grow-sprig{left:calc(100% - .15em)}
+  .grow-sprig{left:calc(100% - .10em)}
   .about-falling-leaf{display:none}
   html{font-size:16px;scroll-padding-top:56px;scroll-snap-type:none}
   .industries,.faq,.testimonial-slide{scroll-snap-align:none}
@@ -340,14 +339,15 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
   .page-loader.is-preparing{transform:translate3d(0,101%,0)}
   .site-header{height:56px}
   .header-inner{width:calc(100% - 44px);grid-template-columns:1fr auto auto;gap:12px}
-  .brand{gap:6px}
+  .brand{gap:6px;transition:opacity .4s ease}
   .brand-symbol{width:40px;height:40px}
   .brand-wordmark{font-size:10.5px}
   .brand-wordmark small{font-size:6px;margin-top:4px;padding-top:3px}
   .header-cta{min-height:34px;padding:6px 12px;font-size:10px}
   body.menu-open{overflow:hidden}
   .site-header.menu-open{background:var(--green-deep);box-shadow:none}
-  .site-header.menu-open .brand,.site-header.menu-open .header-cta{visibility:hidden}
+  .site-header.menu-open .brand{visibility:hidden;opacity:0}
+  .site-header.menu-open .header-cta{visibility:hidden}
   .site-header.menu-closing{background:transparent;box-shadow:none}
   .site-header.menu-closing::before{content:"";position:absolute;inset:0;z-index:2;background:var(--paper-gradient);pointer-events:none}
   .site-header.is-scrolled.menu-closing::before{background:#fff}
