@@ -94,6 +94,7 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 .hero-actions .button-outline{min-width:10.3rem}
 .hero-art{position:absolute;top:0;right:0;width:57.5rem;height:38rem;z-index:1}
 .hero-art svg{width:100%;height:100%}
+.hero-top-extension{display:none}
 
 .benefits{height:19.375rem;margin-top:-2.75rem;position:relative;z-index:4;color:#fff;overflow:hidden}
 .benefits-wave{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
@@ -312,11 +313,13 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 @media(min-width:1201px){
   :root{--fold-hero-height:max(33rem,min(38rem,calc(100svh - 4.7rem - 15.5rem + 2.75rem)))}
   html{font-size:clamp(12px,min(1.05vw,1.851851852svh),20px)}
-  .hero{height:auto;min-height:var(--fold-hero-height)}
+  .hero{height:auto;min-height:var(--fold-hero-height);overflow:visible}
   .hero-inner{height:auto;min-height:var(--fold-hero-height)}
   .hero-copy{padding-bottom:4rem}
   .hero h1{font-size:5.25rem;white-space:nowrap}
   .hero-art{bottom:0;height:auto;width:auto;aspect-ratio:57.5/38}
+  .hero-art svg{overflow:visible}
+  .hero-top-extension{display:block}
   .benefits{height:max(15.5rem,calc(100svh - 4.7rem - var(--fold-hero-height) + 2.75rem))}
 }
 

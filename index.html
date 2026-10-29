@@ -110,10 +110,22 @@
             <clipPath id="hero-rounded-photo" clipPathUnits="userSpaceOnUse">
               <ellipse cx="1015" cy="540" rx="850" ry="800"/>
             </clipPath>
+            <clipPath id="hero-top-extension-only" clipPathUnits="userSpaceOnUse">
+              <rect x="0" y="-180" width="1457" height="180"/>
+            </clipPath>
+            <clipPath id="hero-top-extension-photo" clipPathUnits="userSpaceOnUse">
+              <path d="M778 0 C836.5 -60 975 -130 1120 -141 C1240 -151 1325 -177 1457 -180 V0Z"/>
+            </clipPath>
             <clipPath id="hero-rounded-photo-mobile" clipPathUnits="userSpaceOnUse">
               <path id="hero-rounded-photo-mobile-path" d="M790 25 A667 515 0 0 1 1457 540 C1457 760 1430 970 1380 1010 Q690 1210 0 950 L123 540 A667 515 0 0 1 790 25Z"/>
             </clipPath>
           </defs>
+          <g class="hero-top-extension" clip-path="url(#hero-top-extension-only)">
+            <path d="M770 0 C828.5 -60 959 -130 1104 -141 C1224 -151 1309 -177 1441 -180 H1457 V0Z" fill="#fdfaf4"/>
+            <g clip-path="url(#hero-top-extension-photo)">
+              <image href="assets/hero-options/laptop.png" x="140" y="0" width="1457" height="1080" preserveAspectRatio="none" transform="scale(1 -1)"/>
+            </g>
+          </g>
           <!-- Change this href to swap the photograph while retaining the artwork and mask. -->
           <image class="hero-photo" href="assets/hero-options/laptop.png" x="140" y="0" width="1457" height="1080" preserveAspectRatio="none" clip-path="url(#hero-rounded-photo)"/>
           <g class="hero-frame-art"><image class="hero-frame-overlay" href="assets/hero-composite.png" x="0" y="0" width="1457" height="1080" preserveAspectRatio="none" mask="url(#hero-frame-mask)"/></g>
